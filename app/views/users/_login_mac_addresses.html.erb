@@ -1,0 +1,26 @@
+<div id="tab2"> <!--  Start of Tab 1 -->
+
+  <div class="ae-widget">
+    <table id="pagetable"><!--  Start of Table -->
+      <thead>
+      <tr>
+        <th>Login</th>
+        <th>Mac Address</th>
+        <th>Full Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% users.each do |user| %>
+      <tr>
+        <td><%= user.UserName %></td>
+        <td><%= user.mac_addresses %></td>
+        <td><%= user.count %></td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <!--  End of Table -->
+  </div>
+
+</div>
+<!--  End of Tab 1 -->

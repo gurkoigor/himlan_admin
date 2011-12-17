@@ -1,0 +1,310 @@
+<!--<!DOCTYPE html>-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>HimlanAdmin</title>
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "jquery-ui-1.8.2.custom" %>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.min" %>
+  <%= javascript_include_tag "jquery-ui-1.8.2.custom.min" %>
+  <%= javascript_include_tag "jQuery.tree" %>
+  <%= javascript_include_tag "cufon-yui" %>
+  <%= javascript_include_tag "jquery.dataTables.min" %>
+  <%= javascript_include_tag "Quicksand_Book_400.font" %>
+  <%= javascript_include_tag "raphael-min" %>
+  <%= javascript_include_tag "custom" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="message-box" title="Message Box">
+
+  <h5>Message 1</h5>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.</p>
+  <h5>Message 2</h5>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.</p>
+  <h5>Message 3</h5>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.</p>
+
+</div>
+
+<!-- End of Message Box  -->
+
+<div id="header"><!-- Start of Header -->
+
+
+  <div id="notice-bar">
+    <ul>  <!--  Start of Tab Controls -->
+      <li><a href="#"> Welcome, Admin :</a></li>
+      <li><a href="#" id="message-button"> 3 Messages</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+    <!--  End of Tab Controls -->
+  </div>
+  <!-- Notice bar at the right side  -->
+  <form action="#" method="post" id="search-bar"><!-- Start of AutoComplete Search Bar -->
+    <fieldset>
+      <input type="text" id="search" class=" ui-corner-left"/><input type="submit" value=" " id="search_submit"/>
+    </fieldset>
+    <!-- End of Search Bar  -->
+  </form>
+  <h1>Dashboard</h1>
+</div>
+<!-- End of Header  -->
+
+<div class="container" id="top-panel"><!--  Start of container -->
+
+  <div class=" left-col"><!-- Start of Left Column -->
+    <div class="urgent"><!-- Start of Urgent Message -->
+      <h6>Attention required</h6>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus. Curabitur et lacus
+        ligula. Sed euismod lacinia magna tincidunt semper.
+      </p>
+    </div>
+    <!-- End of Urgent message  -->
+  </div>
+  <!-- End of Left Column  -->
+
+
+  <ul id="dock"><!--  Start of Dock -->
+    <%= raw main_menu %>
+  </ul>
+  <!--  End  of Dock -->
+
+  <div class="right-col"><!--  Start of right column -->
+    <div id="calender"></div>
+  </div>
+  <!--  End  of right --->
+
+  <a href="#" id="dock-control"></a><!--  Button for Sliding Head Panel --->
+
+</div>
+<!--  End of Head Panel container -->
+
+
+<div class="container"><!--  Start of container -->
+
+<div class="left-col"><!--  Start of Left Column -->
+
+  <div class="ae-widget-sidebar  minimizable"><!--  Start of Widget Box -->
+    <h4 class="ae-widget-header">Side Menu</h4><!--  Widget  header -->
+    <div class="ae-widget-content"><!--  Start of Widget Content -->
+
+      <ul class="side-menu">
+        <li><a href="#">Invoice </a>
+          <ul>
+            <li><a href="#">Create Invoice</a></li>
+            <li><a href="#">Search Invoice</a></li>
+            <li><a href="#">Delete Invoice</a></li>
+            <li><a href="#">View All</a></li>
+          </ul>
+
+        </li>
+        <li><a href="#">Article</a>
+          <ul>
+            <li><a href="#">Create Invoice</a></li>
+            <li><a href="#">Search Invoice</a></li>
+            <li><a href="#">Delete Invoice</a></li>
+            <li><a href="#">View All</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Gallery</a>
+          <ul>
+            <li><a href="#">Create Category</a></li>
+            <li><a href="#">Search Image</a></li>
+            <li><a href="#">Delete Category</a></li>
+            <li><a href="#">View All</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Traffic</a>
+          <ul>
+            <li><a href="#">Incoming Traffic</a></li>
+            <li><a href="#">Today's Traffic</a></li>
+            <li><a href="#">This Month's Traffic</a></li>
+
+          </ul>
+        </li>
+        <li><a href="#">Delete</a>
+          <ul>
+            <li><a href="#">All Items</a></li>
+            <li><a href="#">All Images</a></li>
+            <li><a href="#">Restore All</a></li>
+            <li><a href="#">Browse</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+    </div>
+    <!--  End of Widget Content -->
+
+  </div>
+  <!--  End of Widget Box -->
+
+  <div class="ae-widget-sidebar closable"><!--  Start of Widget Box -->
+    <h4 class="ae-widget-header">Sidebar Widget</h4>
+
+    <div class="ae-widget-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus. Curabitur et lacus
+        ligula. Sed euismod lacinia magna tincidunt semper. Morbi accumsan, lacus ut euismod lacinia, orci arcu
+        ultricies diam, vel blandit magna diam sed lectus. Vivamus egestas commodo imperdiet. Nullam tempor risus vel
+        nisi auctor aliquam. Phasellus quis nunc at ante posuere auctor non semper nisl.
+      </p>
+    </div>
+
+  </div>
+  <!--  End of Widget Box -->
+
+
+</div>
+<!--  End of Left Column -->
+
+<div id="main-panel"><!--  Start of Main Panel -->
+
+
+  <div id="tab" class="ae-widget"> <!--  Start of Tab Widget -->
+
+    <ul class="ae-widget-header">  <!--  Start of Tab Controls -->
+      <%= yield :other_menu %>
+    </ul>
+    <!--  End of Tab Controls -->
+
+    <div class="tabs" class="ae-widget-content">
+      <%= yield %>
+    </div>
+
+  </div>
+
+</div>
+<!--  End of Main Panel -->
+
+
+<div class="right-col"><!--  Start of Right Column -->
+
+  <div class="ae-widget-sidebar"><!--  Start of Widget Box -->
+    <h4 class="ae-widget-header">Recent Activities</h4>
+
+    <div class="ae-widget-content">
+
+      <ul>
+        <li class="expandable">Invoice Recieved <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.
+        </p></li>
+        <li class="expandable">Article Published <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.
+        </p></li>
+        <li class="expandable">Invoice Sent <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet ornare lacus.
+        </p></li>
+        <li>Not Expandable</li>
+        <li>Image Galery Loaded</li>
+        <li>Filter
+          <div class="ui-widget">
+
+            <select id="combobox">
+              <option value="">Select one...</option>
+              <option value="a">asp</option>
+              <option value="c">c</option>
+              <option value="cpp">c++</option>
+              <option value="cf">coldfusion</option>
+              <option value="g">groovy</option>
+              <option value="h">haskell</option>
+              <option value="j">java</option>
+              <option value="js">javascript</option>
+              <option value="p1">perl</option>
+              <option value="p2">php</option>
+              <option value="p3">python</option>
+              <option value="r">ruby</option>
+              <option value="s">scala</option>
+            </select>
+          </div>
+
+        </li>
+      </ul>
+
+
+    </div>
+
+  </div>
+  <!--  End of Widget Box -->
+
+
+  <div class="ae-widget-sidebar"><!--  Start of Widget Box -->
+    <h4 class="ae-widget-header">Archives</h4>
+
+    <div class="ae-widget-content">
+      <ul class="files"><!--  Tree Widget -->
+        <li><a href="documents.html">Invoices</a>
+          <ul>
+            <li><a href="#">2007</a>
+              <ul>
+                <li><a href="#">ENi.doc</a></li>
+                <li><a href="#">Sd-letter.doc</a></li>
+                <li><a href="#">GDstry.doc</a></li>
+              </ul>
+            </li>
+            <li><a href="#">2008</a>
+              <ul>
+                <li><a href="#">Birthday Parties.doc</a></li>
+                <li><a href="#">Area Playgrounds.doc</a></li>
+              </ul>
+            </li>
+            <li><a href="#">2009</a>
+              <ul>
+                <li><a href="#">Potential Places.doc</a></li>
+                <li><a href="#">Travel Funds.doc</a></li>
+              </ul>
+            </li>
+            <li><a href="#">2010</a>
+              <ul>
+                <li><a href="#">Guests.doc</a></li>
+                <li><a href="#">Services.doc</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Projects</a>
+          <ul>
+            <li><a href="#">The Big Lebowski.m4v</a></li>
+            <li><a href="#">Planet Earth.m4v</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logs</a>
+          <ul>
+            <li><a href="#">Bloc Party - Pioneers.mp3</a></li>
+            <li><a href="#">Fleet Foxes - Blue Ridge Mountains.mp3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">My Photos</a>
+          <ul>
+            <li><a href="#">yellow-flower.jpg</a></li>
+            <li><a href="#">orange-flower.jpg</a></li>
+            <li><a href="#">red-flower.jpg</a></li>
+            <li><a href="#">white-flower.jpg</a></li>
+            <li><a href="#">bumblebees.jpg</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+  <!--  End of Widget Box -->
+
+</div>
+<!--  End of Right Column -->
+
+</div>
+<!--  End of container -->
+
+</body>
+</html>

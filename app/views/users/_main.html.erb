@@ -1,0 +1,26 @@
+<div id="tab1"> <!--  Start of Tab 1 -->
+
+  <div class="ae-widget">
+    <table id="pagetable"><!--  Start of Table -->
+      <thead>
+      <tr>
+        <th>Login</th>
+        <th>Full Name</th>
+        <th>Option</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% users.each do |user| %>
+      <tr>
+        <td><%= user.login %></td>
+        <td><%= user.full_name %></td>
+        <td><img src="images/icons/option-sprite.jpg" alt="option-sprite"/></td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <!--  End of Table -->
+  </div>
+
+</div>
+<!--  End of Tab 1 -->
