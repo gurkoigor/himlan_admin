@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-HimlanAdmin::Application.config.secret_token = 'd8b8e64a96afb6b1ddc66776ffbe65123eea1dfa836d2ee93861e9202f481ac277c0d3528c5733849309c23d8e920f1713955bc695364b0415f8c2dbcddb4360'
+HimlanAdmin::Application.config.secret_token = 'dc61538fa84677329b2d47794d5c4ec6553ea5806db92d06e89079124d623ed000c88d38374bdecd53c6a41848ccd5d59c2af25c3316664e48d310b66f5c1b29'
