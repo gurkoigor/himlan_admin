@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Mcm::Application.load_tasks
+HimlanAdmin::Application.load_tasks

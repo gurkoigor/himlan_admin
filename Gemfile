@@ -6,18 +6,7 @@ gem 'rails', '3.0.5'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.2.7'
-#gem "will_paginate", "~> 3.0.pre2"
-#gem "devise"
-#gem "paperclip"
-#gem 'jquery-rails', "~>0.2"
-#gem 'dynamic_form' # for error messages
-#gem 'acts_as_tree'
-#gem 'russian'
-
-#group :test, :development do
-  #gem "rspec-rails"
-  #gem "mongrel"
-#end
+gem 'json'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -41,4 +30,3 @@ gem 'mysql2', '0.2.7'
 # group :development, :test do
 #   gem 'webrat'
 # end
-
