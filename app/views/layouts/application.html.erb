@@ -191,6 +191,13 @@
 <div class="right-col"><!--  Start of Right Column -->
 
   <div class="ae-widget-sidebar"><!--  Start of Widget Box -->
+    
+    <%= form_tag users_path, :method => :get do %>
+      <%= text_field_tag :from, params[:from] || Date.today.beginning_of_month %>
+      <%= text_field_tag :to, params[:to] || Date.today.end_of_month %>
+      <%= submit_tag "Filter" %>
+    <% end %>
+    
     <h4 class="ae-widget-header">Recent Activities</h4>
 
     <div class="ae-widget-content">

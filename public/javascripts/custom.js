@@ -36,7 +36,14 @@ $(function(){
 		   $(".buttonset").buttonset();
 		   
 		  // ------------------- Calender jQuery Widget --------------------- 
-		  $("#calender").datepicker();
+		  $("#calender").datepicker({ showOtherMonths: true });
+
+		  var dates = $("#from, #to" ).datepicker({
+				defaultDate: "+1w",
+				changeMonth: true,
+				numberOfMonths: 1,
+				dateFormat: 'yy-mm-dd'
+			});
 		
 		  //------------------Side Menu jQuery Widget ---------------------  
 		  

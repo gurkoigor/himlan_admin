@@ -6,6 +6,7 @@
         <th>Login</th>
         <th>Mac Address</th>
         <th>Count</th>
+        <th>Last connect</th>
       </tr>
       </thead>
       <tbody>
@@ -14,6 +15,7 @@
         <td><%= event.UserName %></td>
         <td><%= event.CallingStationId %></td>
         <td><%= event.count %></td>
+        <td><%= event.AcctStartTime %></td>
       </tr>
       <% end %>
       </tbody>
