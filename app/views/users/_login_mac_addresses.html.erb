@@ -1,20 +1,20 @@
-<div id="tab2"> <!--  Start of Tab 1 -->
+<div id="tab1"> <!--  Start of Tab 1 -->
 
   <div class="ae-widget">
-    <table id="pagetable"><!--  Start of Table -->
+    <table class="without_paginate"><!--  Start of Table -->
       <thead>
       <tr>
         <th>Login</th>
         <th>Mac Address</th>
-        <th>Full Name</th>
+        <th>Count Mac Addresses</th>
       </tr>
       </thead>
       <tbody>
-      <% users.each do |user| %>
+      <% events.each do |event| %>
       <tr>
-        <td><%= user.UserName %></td>
-        <td><%= user.mac_addresses %></td>
-        <td><%= user.count %></td>
+        <td><%= event.UserName %></td>
+        <td><%= event.mac_addresses %></td>
+        <td><%= event.count %></td>
       </tr>
       <% end %>
       </tbody>

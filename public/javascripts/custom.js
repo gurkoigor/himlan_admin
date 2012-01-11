@@ -47,8 +47,8 @@ $(function(){
 		// -------------------Autocomplete jQuery Widget ---------------------  
 		  
 			$("#search").autocomplete({
-			source: availableTags
-		});
+				source: availableTags
+			});
 			
 //		// Graphs
 //		$("#bar table").graphix({width:400,height:340,type:"bar"});
@@ -59,9 +59,12 @@ $(function(){
 		  
 		 //------------------------- Table Widget ------------------------------
 		 $('#pagetable').dataTable({
-					
 					"sPaginationType": "full_numbers"
-				});
+			});
+			
+			$('.without_paginate').dataTable({
+				"aaSorting": [[ 2, "desc" ]]
+			});
 		  
 		 // ------------------- Tab jQuery Widget  Coding ---------------------
 		 

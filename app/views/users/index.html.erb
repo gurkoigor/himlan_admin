@@ -1,10 +1,10 @@
 <% content_for :other_menu do %>
-  <li><a href="#">Main</a></li>
-  <li><a href="#">Mac Address Logins</a></li>
-  <li><a href="#">Login Mac Addresses</a></li>
+  <li><a href="#">Mac-Logins</a></li>
+  <li><a href="#">Login-Macs</a></li>
+  <li><a href="#">Login on Mac</a></li>
 <% end %>
 
-<%= render :partial => 'main', :locals => { :users => @users } %>
-<%= render :partial => 'mac_address_logins', :locals => { :users => @mac_address_logins } %>
-<%= render :partial => 'login_mac_addresses', :locals => { :users => @login_mac_addresses } %>
+<%= render :partial => 'mac_address_logins', :locals => { :events => @mac_address_logins } %>
+<%= render :partial => 'login_mac_addresses', :locals => { :events => @login_mac_addresses } %>
+<%= render :partial => 'login_on_mac_address', :locals => { :events => @login_on_mac_address } %>
 

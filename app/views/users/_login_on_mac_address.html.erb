@@ -1,26 +1,22 @@
-<div id="tab2"> <!--  Start of Tab 1 -->
-
+<div id="tab3">
   <div class="ae-widget">
-    <table class="without_paginate"><!--  Start of Table -->
+    <table class="without_paginate">
       <thead>
       <tr>
+        <th>Login</th>
         <th>Mac Address</th>
-        <th>Logins</th>
-        <th>Count Logins</th>
+        <th>Count</th>
       </tr>
       </thead>
       <tbody>
       <% events.each do |event| %>
       <tr>
+        <td><%= event.UserName %></td>
         <td><%= event.CallingStationId %></td>
-        <td><%= event.logins %></td>
         <td><%= event.count %></td>
       </tr>
       <% end %>
       </tbody>
     </table>
-    <!--  End of Table -->
   </div>
-
 </div>
-<!--  End of Tab 1 -->
